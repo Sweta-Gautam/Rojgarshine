@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Link Swiper's CSS -->
+
+  
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    .quick-search-bar {
+    padding: 16px 0 18px;
+    background-color: #fff;
+    position: relative;
+    }
+
+    .quick-search-bar .search-bar-wrapper {
+    max-width: 1263px;
+    margin: 0 auto;
+    }
+
+    .quick-search-bar-drawer {
+    display: inline-block;
+    }
+
+    .qsb-form .form-text {
+    color: #091e42;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 7px;
+    padding-top: 7px;
+    padding-bottom: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.qsb-form .keyword-suggestor {
+    width: 343px;
+}
+.qsb-form .keyword-suggestor, .qsb-form .location-suggestor, .qsb-suggestor {
+    position: relative;
+    margin-right: 10px;
+    background-color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.suggest {
+    background-color: #fff;
+}
+.qsb-form .location-suggestor {
+    width: 158px;
+}
+
+ .qsb-form .location-suggestor, .qsb-suggestor {
+    position: relative;
+    margin-right: 10px;
+    background-color: #fff;
+    display: inline-block;
+    vertical-align: middle
+ }
+
+ .qsb-form button {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+
+.quick-search-bar button {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.qsb-form .naukicon-cross {
+    height: 24px;
+    width: 24px;
+    color: #667a89;
+    display: inline-block;
+    line-height: 24px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: -50%;
+    font-size: 24px;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+  <div class="srp-header">
+    <section class="quick-search-bar">
+        <div class="search-bar-wrapper">
+        <img src="//static.naukimg.com/s/7/109/assets/images/qsb.e037c49a.png" alt="Modify Search">
+        <div class="quick-search-bar-drawer">
+            <div class="quick-search-bar__active">
+            <form method="POST" class="qsb-form" name="quickSearchBarForm">
+                <span class="form-text">Showing results for </span>
+                <span class="keyword-suggestor"><div class="sugComp">
+                <div>
+                    <div class="suggest">
+                        <div class="sWrap">
+                            <div class="iconWrap"><span class="nLoder" style="display: none;"></span></div><div class="inpWrap"><input type="text" class="sugInp" name="keyword" id="qsb-keyword-sugg" placeholder="Skills, Designation, Companies" rel="" value="it" autocomplete="off" trackparams="{&quot;id&quot;:&quot;qsb-keyword-sugg&quot;,&quot;sourceId&quot;:&quot;&quot;,&quot;platform&quot;:&quot;&quot;,&quot;appId&quot;:103,&quot;trackingSrc&quot;:&quot;&quot;}"></div></div><div class="sugCont false slideDown" id="sugDrp_qsb-keyword-sugg" style="width: 100%;"><ul class="Sdrop"><li class="category">Suggested Keywords</li><li class="sugTouple" data-id="undefined"><div tabindex="-1" class="Sbtn" title="" style="width:100%">Application Programming</div></li><li class="sugTouple" data-id="undefined"><div tabindex="-1" class="Sbtn" title="" style="width:100%">Non It<strong></strong></div></li><li class="sugTouple" data-id="undefined"><div tabindex="-1" class="Sbtn" title="" style="width:100%">Non IT<strong> Recruitment</strong></div></li><li class="sugTouple" data-id="undefined"><div tabindex="-1" class="Sbtn" title="" style="width:100%">IT<strong>ES</strong></div></li><li class="sugTouple" data-id="undefined"><div tabindex="-1" class="Sbtn" title="" style="width:100%">Management Services</div></li><li class="sugTouple" data-id="undefined"><div tabindex="-1" class="Sbtn" title="" style="width:100%">Software Services</div></li><li class="sugTouple" data-id="undefined"><div tabindex="-1" class="Sbtn" title="" style="width:100%">It<strong> Administration</strong></div></li><li class="sugTouple" data-id="undefined"><div tabindex="-1" class="Sbtn" title="" style="width:100%">Information Technology</div></li></ul></div></div></div></div></span><span class="location-suggestor"><div class="sugComp"><div><div class="suggest"><div class="sWrap"><div class="iconWrap"><span class="nLoder"></span></div><div class="inpWrap"><input type="text" class="sugInp" name="location" id="qsb-location-sugg" placeholder="Location/Locality" rel="" autocomplete="off" trackparams="{&quot;id&quot;:&quot;qsb-location-sugg&quot;,&quot;sourceId&quot;:&quot;&quot;,&quot;platform&quot;:&quot;&quot;,&quot;appId&quot;:&quot;&quot;,&quot;trackingSrc&quot;:&quot;&quot;}"></div></div><div class="sugCont false" id="sugDrp_qsb-location-sugg"><ul class="Sdrop"></ul></div></div></div></div></span><button type="submit" class="btn-primary">Modify Search</button><span class="naukicon naukicon-cross"></span></form></div></div></div></section>
+</div>
+</body>
+</html>
